@@ -1,0 +1,19 @@
+{
+  "name": "suggest_me_a_laptop",
+  "version": "1.0.0",
+  "description": "It will suggest laptop based on requirements and budget",
+  "license": "ISC",
+  "author": "Zayed",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node --env-file .env server.js",
+    "dev": "node --watch --env-file .env server.js"
+  },
+  "dependencies": {
+    "exa-js": "^2.11.0",
+    "express": "^5.2.1",
+    "openai": "^6.33.0",
+    "zod": "^3.25.76"
+  }
+}
