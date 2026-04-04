@@ -10,6 +10,7 @@ const openai = new OpenAI({
 export const matchLaptop = async (req, res, next) => {
     try {
         const format = zodResponseFormat(LaptopsResponseSchema, "laptop_suggestions");
+        const userQuery = req.body.query || "Suggest me best laptops for gaming under 100000 BDT.";
         const completion = await openai.chat.completions.create({
             model: "openai/gpt-oss-120b",
             messages: [{
@@ -17,7 +18,7 @@ export const matchLaptop = async (req, res, next) => {
                 content: "You are a Bangladeshi Tech expert, working closely with local vendors to provide the best laptop suggestions."
             }, {
                 role: "user",
-                content: req.body.prompt || "I am new to CSE. I need a budget firendly laptop that will run all my necessary softwares and programs needed for my studies, and sometimes for browsing and entertainment. My budget is around 50,000 BDT."
+                content: userQuery
             }],
             response_format: format,
         });
