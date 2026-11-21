@@ -1,3 +1,4 @@
+import './utils/validateEnv.js';
 import express from 'express';
 import corsMiddleware from './middlewares/cors.js';
 import errorHandler from './middlewares/errorHandler.js';
