@@ -2,7 +2,7 @@
 
 You ask for something like *"a laptop for programming under 90,000 BDT"* and this small Express service answers with two or three current options from Bangladeshi computer shops, with price, specs, warranty and a link.
 
-It is a small side project to try out a pattern I wanted for in-app assistants: fetch fresh data first, then let the model only pick and summarise, with its output forced into a schema the client can rely on.
+It is a compact version of the pattern I use for in-app assistants: fetch fresh data first, then let the model only pick and summarise, with its output forced into a schema the client can rely on.
 
 ## How it works
 
